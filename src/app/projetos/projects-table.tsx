@@ -9,21 +9,7 @@ import {
   getKeyValue,
 } from "@heroui/react";
 import { rows } from "./rows";
-
-const columns = [
-  {
-    key: "name",
-    label: "NAME",
-  },
-  {
-    key: "role",
-    label: "ROLE",
-  },
-  {
-    key: "status",
-    label: "STATUS",
-  },
-];
+import { columns } from "./columns";
 
 export function ProjectsTable() {
   return (
@@ -36,11 +22,28 @@ export function ProjectsTable() {
         {(item) => (
           <TableRow key={item.key}>
             {(columnKey) => (
-              <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+              <TableCell>
+                {columnKey == "status"
+                  ? getStatusCard(item.status)
+                  : getKeyValue(item, columnKey)}
+              </TableCell>
             )}
           </TableRow>
         )}
       </TableBody>
     </Table>
   );
+}
+
+function getStatusCard(status: string) {
+  let card;
+  switch (status) {
+    case "Active":
+      card = "active chip";
+    case "Paused":
+      card = "paused chip";
+    default:
+      card = "null";
+  }
+  return card;
 }

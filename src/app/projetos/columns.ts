@@ -1,4 +1,4 @@
-const projectColumns = [
+export const columns = [
   {
     key: "id",
     label: "ID",

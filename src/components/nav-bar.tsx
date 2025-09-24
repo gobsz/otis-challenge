@@ -3,7 +3,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Avatar,
 } from "@heroui/react";
 import { NavLink } from "./nav-link";
@@ -41,12 +40,12 @@ export function NavBar() {
     <Navbar className="w-11/12 mx-auto p-1 top-4 rounded-2xl bg-gray-100 shadow-xl">
       <NavbarBrand className="text-[#0a0a0a]">
         <AcmeLogo />
-        <p className="font-bold text-inherit text-xl">ACME</p>
+        <p className="font-bold text-inherit text-xl">Elevate LATAM</p>
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {links.map((link) => (
-          <NavLink {...link} />
+        {links.map((link, idx) => (
+          <NavLink {...link} key={idx} />
         ))}
       </NavbarContent>
 
