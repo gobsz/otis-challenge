@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { Figtree, Space_Grotesk } from "next/font/google";
-import { HeroUIProvider } from "@heroui/react";
-import { NavBar } from "@/components/nav-bar";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 
 const inter = Figtree({
@@ -21,12 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-white h-screen">
-      <body className={`${inter.className} antialiased`}>
-        <HeroUIProvider>
-          <NavBar />
-          <main className="px-16 py-8">{children}</main>
-        </HeroUIProvider>
-      </body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }

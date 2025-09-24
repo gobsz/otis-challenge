@@ -1,7 +1,9 @@
 export default function LogIn() {
   return (
-    <>
-      <h1 className="font-inter font-semibold text-3xl mb-8">Log In</h1>
-    </>
+    <main className="px-24 py-12">
+      <form action="" className="mx-auto">
+        <h1 className="font-inter font-semibold text-4xl mb-8">Log In</h1>
+      </form>
+    </main>
   );
 }

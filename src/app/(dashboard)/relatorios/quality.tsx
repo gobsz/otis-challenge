@@ -1,10 +1,8 @@
-import { ReactNode } from "react";
+import { KPICard } from "../kpi";
 
-export function MetricCards() {
-  // ! BUSCA DE DADOS
-
+export function Quality() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
       <KPICard
         metric="Projetos Ativos"
         score="78"
@@ -101,37 +99,6 @@ export function MetricCards() {
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
         </svg>
       </KPICard>
-    </div>
-  );
-}
-
-interface KPICardProps {
-  metric: string;
-  score: string;
-  children: ReactNode;
-  color: string;
-  description: string;
-}
-
-export function KPICard({
-  metric,
-  score,
-  children,
-  color,
-  description,
-}: KPICardProps) {
-  return (
-    <div className="bg-[#fdfdfd] p-6 rounded-lg shadow">
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-sm font-medium text-gray-500">{metric}</p>
-          <p className="text-3xl font-bold text-gray-800">{score}</p>
-        </div>
-        <div className={`bg-${color}-100 text-${color}-600 p-3 rounded-full`}>
-          {children}
-        </div>
-      </div>
-      <p className="mt-2 text-xs text-gray-500">{description}</p>
     </div>
   );
 }
