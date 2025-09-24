@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@heroui/react": "^2.8.4",
+    "chart.js": "^4.5.0",
     "framer-motion": "^12.23.20",
     "next": "15.5.4",
     "postcss": "^8.5.6",
