@@ -2,6 +2,7 @@
   "name": "challenge-otis",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,6 +10,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@heroui/react": "^2.8.4",
+    "framer-motion": "^12.23.20",
     "next": "15.5.4",
     "postcss": "^8.5.6",
     "react": "19.1.0",
