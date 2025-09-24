@@ -20,11 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-screen bg-black">
+    <html lang="en" className="bg-white h-screen">
       <body className={`${inter.className} antialiased`}>
         <HeroUIProvider>
           <NavBar />
-          {children}
+          <main className="px-16 py-8">{children}</main>
         </HeroUIProvider>
       </body>
     </html>

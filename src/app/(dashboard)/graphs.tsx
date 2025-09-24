@@ -8,6 +8,7 @@ export function Graphs() {
 
   useEffect(() => {
     // --- Bar Chart ---
+    if (!barChartRef || !barChartRef.current) return;
     const barCtx = barChartRef.current.getContext("2d");
 
     const barChart = new Chart(barCtx, {
@@ -72,13 +73,14 @@ export function Graphs() {
 
   return (
     <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow">
+      <div className="lg:col-span-2 bg-[#fdfdfd] p-6 rounded-lg shadow">
         <h2 className="font-semibold text-gray-800 text-2xl mb-4">
           Projetos por País
         </h2>
         <canvas ref={barChartRef}></canvas>
       </div>
-      <div className="bg-white p-6 rounded-lg shadow">
+
+      <div className="bg-[#fdfdfd] p-6 rounded-lg shadow">
         <h2 className="font-semibold text-gray-800 text-2xl mb-4">
           Status dos Projetos
         </h2>

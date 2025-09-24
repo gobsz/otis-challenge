@@ -1,7 +1,9 @@
 export function KPICard() {
+  // ! IMPLEMENTAR BUSCA DE DADOS
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div className="bg-white p-6 rounded-lg shadow">
+      <div className="bg-[#fdfdfd] p-6 rounded-lg shadow">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm font-medium text-gray-500">Projetos Ativos</p>
@@ -31,7 +33,8 @@ export function KPICard() {
         </div>
         <p className="mt-2 text-xs text-gray-500">+3 na última semana</p>
       </div>
-      <div className="bg-white p-6 rounded-lg shadow">
+
+      <div className="bg-[#fdfdfd] p-6 rounded-lg shadow">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm font-medium text-gray-500">
@@ -59,7 +62,8 @@ export function KPICard() {
         </div>
         <p className="mt-2 text-xs text-gray-500">Meta: 90%</p>
       </div>
-      <div className="bg-white p-6 rounded-lg shadow">
+
+      <div className="bg-[#fdfdfd] p-6 rounded-lg shadow">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm font-medium text-gray-500">Custo Médio</p>
@@ -87,7 +91,8 @@ export function KPICard() {
         </div>
         <p className="mt-2 text-xs text-gray-500">Orçado vs. Realizado</p>
       </div>
-      <div className="bg-white p-6 rounded-lg shadow">
+
+      <div className="bg-[#fdfdfd] p-6 rounded-lg shadow">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm font-medium text-gray-500">
