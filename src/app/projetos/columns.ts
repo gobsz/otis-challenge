@@ -12,11 +12,19 @@ export const columns = [
     label: "PAÍS",
   },
   {
+    key: "deadline",
+    label: "PRAZO",
+  },
+  {
     key: "status",
     label: "STATUS",
   },
   {
     key: "assignee",
     label: "RESPONSÁVEL",
+  },
+  {
+    key: "actions",
+    label: "AÇÕES",
   },
 ];

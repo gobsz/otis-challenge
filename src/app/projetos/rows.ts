@@ -15,7 +15,7 @@ export const rows = [
     key: "3",
     name: "Jane Fisher",
     role: "Senior Developer",
-    status: "Active",
+    status: "Done",
   },
   {
     key: "4",

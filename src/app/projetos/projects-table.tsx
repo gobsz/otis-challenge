@@ -10,12 +10,20 @@ import {
 } from "@heroui/react";
 import { rows } from "./rows";
 import { columns } from "./columns";
+import { getStatusCard } from "./get-status-card";
 
 export function ProjectsTable() {
   return (
-    <Table aria-label="Projects Table" className="h-full">
+    <Table isStriped aria-label="Projects Table" className="h-full">
       <TableHeader columns={columns}>
-        {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
+        {(column) => (
+          <TableColumn
+            key={column.key}
+            align={column.key == "status" ? "center" : "start"}
+          >
+            {column.label}
+          </TableColumn>
+        )}
       </TableHeader>
 
       <TableBody items={rows} className="overflow-scroll">
@@ -33,17 +41,4 @@ export function ProjectsTable() {
       </TableBody>
     </Table>
   );
-}
-
-function getStatusCard(status: string) {
-  let card;
-  switch (status) {
-    case "Active":
-      card = "active chip";
-    case "Paused":
-      card = "paused chip";
-    default:
-      card = "null";
-  }
-  return card;
 }
