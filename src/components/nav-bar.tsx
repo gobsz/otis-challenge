@@ -6,6 +6,7 @@ import {
   Avatar,
 } from "@heroui/react";
 import { NavLink } from "./nav-link";
+import { ElevateLogo } from "./elevate-logo";
 
 const AcmeLogo = () => {
   return (
@@ -39,8 +40,8 @@ export function NavBar() {
   return (
     <Navbar className="w-11/12 mx-auto p-1 top-4 rounded-2xl bg-gray-100 shadow-xl">
       <NavbarBrand className="text-[#0a0a0a]">
-        <AcmeLogo />
-        <p className="font-bold text-inherit text-xl">Elevate LATAM</p>
+        <ElevateLogo />
+        <p className="font-bold text-inherit text-xl ml-2">Elevate LATAM</p>
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
