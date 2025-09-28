@@ -4,13 +4,10 @@ import { Quality } from "./quality";
 
 export default function Relatorios() {
   return (
-    <>
-      <h1 className="font-inter font-semibold text-3xl mb-4">Prazos</h1>
+    <main className="p-6 md:p-8 space-y-8">
       <Deadlines />
-      <h1 className="font-inter font-semibold text-3xl mb-4">Custos</h1>
       <Costs />
-      <h1 className="font-inter font-semibold text-3xl mb-4">Qualidade</h1>
       <Quality />
-    </>
+    </main>
   );
 }

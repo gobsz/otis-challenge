@@ -1,6 +1,6 @@
 import { Graphs } from "@/app/(dashboard)/graphs";
 import { MetricCards } from "@/app/(dashboard)/kpi";
-import { ProjectTable } from "@/app/(dashboard)/project-table";
+import { ProjectTableView } from "@/app/(dashboard)/project-table-view";
 
 export default function Dashboard() {
   return (
@@ -11,7 +11,7 @@ export default function Dashboard() {
 
       <Graphs />
 
-      <ProjectTable />
+      <ProjectTableView />
     </>
   );
 }

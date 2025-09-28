@@ -41,6 +41,7 @@ export function Graphs() {
     });
 
     // --- Doughnut Chart ---
+    if (!doughnutChartRef || !doughnutChartRef.current) return;
     const doughnutCtx = doughnutChartRef.current.getContext("2d");
     const doughnutChart = new Chart(doughnutCtx, {
       type: "doughnut",
@@ -77,14 +78,14 @@ export function Graphs() {
         <h2 className="font-semibold text-gray-800 text-2xl mb-4">
           Projetos por País
         </h2>
-        <canvas ref={barChartRef}></canvas>
+        <canvas ref={barChartRef} />
       </div>
 
       <div className="bg-[#fdfdfd] p-6 rounded-lg shadow">
         <h2 className="font-semibold text-gray-800 text-2xl mb-4">
           Status dos Projetos
         </h2>
-        <canvas ref={doughnutChartRef}></canvas>
+        <canvas ref={doughnutChartRef} />
       </div>
     </div>
   );

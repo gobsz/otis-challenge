@@ -28,3 +28,13 @@ export const columns = [
     label: "AÇÕES",
   },
 ];
+
+export interface ProjectType {
+  id: string;
+  cliente: string;
+  country: string;
+  deadline: Date;
+  status: string;
+  assignee: string;
+  actions: string;
+}
