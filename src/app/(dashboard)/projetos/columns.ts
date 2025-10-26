@@ -33,7 +33,7 @@ export interface ProjectType {
   id: string;
   cliente: string;
   country: string;
-  deadline: Date;
+  deadline: string;
   status: string;
   assignee: string;
   actions: string;

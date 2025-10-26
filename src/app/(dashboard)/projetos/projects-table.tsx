@@ -8,9 +8,11 @@ import {
   TableCell,
   getKeyValue,
 } from "@heroui/react";
-import { rows } from "./rows";
 import { columns } from "./columns";
 import { getStatusCard } from "./get-status-card";
+import { projects } from "./projects";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export function ProjectsTable() {
   return (
@@ -26,9 +28,13 @@ export function ProjectsTable() {
         )}
       </TableHeader>
 
-      <TableBody items={rows} className="overflow-scroll">
+      <TableBody items={projects} className="overflow-scroll">
         {(item) => (
-          <TableRow key={item.key}>
+          <TableRow
+            key={item.id}
+            onClick={() => redirect(`/projetos/${item.id}`)}
+            className="cursor-pointer hover:scale-103 transition-transform ease-in-out"
+          >
             {(columnKey) => (
               <TableCell>
                 {columnKey == "status"

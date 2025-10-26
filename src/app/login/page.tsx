@@ -33,7 +33,7 @@ export default function LogIn() {
             Bem-vindo de volta! Por favor, insira seus dados.
           </p>
 
-          <LoginForm />
+          <LoginForm url="/" />
         </div>
       </div>
     </main>

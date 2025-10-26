@@ -30,7 +30,7 @@ export default function LogInCliente() {
             Bem-vindo de volta! Por favor, insira seus dados.
           </p>
 
-          <LoginForm />
+          <LoginForm url="/cliente" />
         </div>
       </div>
     </main>

@@ -1,4 +1,6 @@
-export function LoginForm() {
+import Link from "next/link";
+
+export function LoginForm({ url }: { url: string }) {
   return (
     <>
       <form action="#" method="POST">
@@ -68,12 +70,12 @@ export function LoginForm() {
           </div>
 
           <div>
-            <button
-              type="submit"
+            <Link
+              href={url}
               className="w-full cursor-pointer flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-[#007BFF] hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#007BFF] transition-colors"
             >
               Entrar
-            </button>
+            </Link>
           </div>
         </div>
       </form>
