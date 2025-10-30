@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
 export function Quality() {
-  const qualityRef = useRef(null);
+  const qualityRef = useRef<any>(null);
 
   useEffect(() => {
     if (!qualityRef || !qualityRef.current) return;

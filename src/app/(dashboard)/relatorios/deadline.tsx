@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { Chart } from "chart.js";
 
 export function Deadlines() {
-  const deadlineRef = useRef(null);
+  const deadlineRef = useRef<any>(null);
 
   useEffect(() => {
     if (!deadlineRef || !deadlineRef.current) return;

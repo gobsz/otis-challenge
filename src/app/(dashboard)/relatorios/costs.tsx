@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { Chart } from "chart.js";
 
 export function Costs() {
-  const costsRef = useRef(null);
+  const costsRef = useRef<any>(null);
 
   useEffect(() => {
     if (!costsRef || !costsRef.current) return;
